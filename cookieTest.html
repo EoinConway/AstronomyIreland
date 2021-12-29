@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    
+    <title>cookie test</title>
+    
+    <style>
+    body {
+        font-family: Calibri, sans-serif;
+    }
+    </style>
+    
+    <script>
+        
+        function setCookie() {
+            var date = new Date();
+            var d = date.getDate();
+            var m = date.getMonth() +1;
+            var y = date.getFullYear();
+            var hr = date.getHours();
+            var min = date.getMinutes();
+            var sec = date.getSeconds();
+            var visitDate = d+"/"+m+"/"+y+"/"+hr+":"+min+":"+sec;
+            alert("date is " + visitDate);
+          document.cookie = "Date="+visitDate;
+        }
+
+        function getCookie(cname) {
+          var name = cname + "=";
+          var decodedCookie = decodeURIComponent(document.cookie);
+          var ca = decodedCookie.split(';');
+          for(var i = 0; i <ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+              c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+            }
+          }
+          return "";
+        }
+
+        function checkCookie() {
+          var date=getCookie("Date");
+          if (date != "") {
+            document.getElementById("dateCookie").innerHTML = "The last time you visited this site was "+date;
+          } else if (date != "" && date != null) {
+               setCookie();
+             //date = prompt("this is your first time"); 
+          }
+        }
+        
+    </script>
+</head>
+
+<body onload="checkCookie();">
+<h2>Welcome to Astronomy Ireland!</h2>
+                <p id="dateCookie">Donec rhoncus ipsum eu ligula finibus, vel vestibulum dui gravida. Sed viverra tincidunt magna at vestibulum. Quisque nec consectetur quam.</p>
+
+<script>
+</script>
+    
+</body>
+</html>

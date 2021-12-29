@@ -1,0 +1,30 @@
+body{ 
+  min-height: 100vh; 
+  margin: 0; 
+  
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+header{ 
+  min-height:50px;
+}
+
+footer{ 
+  min-height: 50px; 
+}
+
+#h1cookie, #emailConfirmation {
+    text-align: center;
+}
+
+#h1cookie {
+    margin-top: 4em;
+}
+
+@media screen and (max-width: 600px) {
+    
+    #emailConfirmation {
+        text-align: left;
+    }
+}

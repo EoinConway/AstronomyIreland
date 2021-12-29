@@ -1,0 +1,59 @@
+h1 {
+    font-size: 2em;
+}
+
+.largeImg, .thumbnails, h1, .prevNext {
+    text-align: center;
+}
+
+.largeImg img{
+    box-shadow: 0em 0.5em 7em 0.1em black;
+}
+
+main img {
+    border: 0.1em solid white;
+}
+
+
+/*mobile*/
+@media screen and (max-width: 600px) {
+    
+    .thumbnails {
+        display: none;
+    }
+    
+    
+}
+
+
+/*tablet*/
+@media screen and (min-width: 601px){
+    
+    .thumbnails img {
+        width: 20%;
+    }
+    
+}
+
+
+/*desktop*/
+@media screen and (min-width: 992px){
+    
+    .largeImg img {
+        height: 35em;
+    }
+    
+    .thumbnails a {
+        margin: 0 0.2em;
+    }
+    
+    .thumbnails img {
+        width:8em;
+    }
+    
+}
+
+    
+
+
+

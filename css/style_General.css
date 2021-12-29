@@ -1,0 +1,257 @@
+/*
+#00060D
+#0A1626
+#021F59
+#011640
+#2E3D59
+*/
+
+
+/*BASE STYLES*/
+
+body {
+    background-color: #2E3D59;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+        }
+
+main {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+h1, h2 {
+    font-family: 'Fascinate', cursive;
+    color: white;
+}
+
+.topnav { 
+    background-color: #0A1626;
+    overflow: hidden;
+        }
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+nav li {
+    float:left;
+}
+
+nav a {
+    display:block;
+    color: white;
+    text-align: center;
+    padding: 1em 1.5em;
+}
+   
+nav a:hover:not(.logo), .active{
+    background-color: #00060D;
+}
+
+nav.icon {
+    display:none;
+}
+
+main {
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.grid-footer {
+    display: grid;
+    background-color: #0A1626;
+    padding: 0.5em;
+}
+
+    .grid-footer a{
+        margin-left: auto;
+        margin: auto;
+    }
+
+footer {
+    color: white;
+    text-align: center;
+    line-height: 2em;
+    margin: 0;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 0;
+}
+
+img {max-width: 100%;}
+
+.logo {
+        margin: 0;
+        padding: 0;
+    }
+
+i {
+    font-family: "FontAwesome";
+    padding: 0 1em;
+}
+
+/*mobile nav*/
+
+
+@media screen and (max-width: 600px) {
+    
+    
+    #logoImg{
+        height: 3em;
+    }
+    
+    nav a{
+        font-size: 4vw;
+    }
+    
+  nav a:not(.logo) {
+      display: none;
+    }
+    
+    nav a.icon {
+      display:block;
+  }
+    
+    nav, nav.responsive {
+        position: relative;
+    }
+    
+    nav a.icon, nav.responsive a.icon{
+        position:absolute;
+        top: 0;
+        right: 0;
+    }
+    
+    nav.responsive li:not(.listLogo) {
+        float:right;
+        clear: right;
+    }
+    
+    nav.responsive li a:not(.icon){
+        display: block;
+        text-align: left;
+    }
+    
+    nav.responsive li a.fun{
+        margin-top: 4.5em;
+    }
+    
+    nav.responsive li a:not(.logo):not(.icon){
+        margin-right: 4em;
+        padding: 1em 6em;
+        text-align: center;
+        width: 2em;
+    }
+    
+    
+    .grid-footer {
+        grid-template-columns: 100%;
+    }
+    
+    #footerLogo {
+        display: none;
+    }
+    
+}
+
+/*tablet */
+
+@media screen and (min-width: 601px){
+    
+    
+    nav {
+        padding: 0;
+    }
+    
+    nav a {
+        font-size: 1.6em;
+    }
+    
+    nav a:not(.logo){
+        padding:  0.9em 0em;
+    }
+    
+    nav .icon {
+        display:none;
+    }
+    
+    .narrow {
+        width:13%;
+    }
+    
+    .wide {
+        width:17%;
+    }
+    
+    .grid-footer {grid-template-columns:repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(4, auto);
+    }
+    
+    #item1,#item2,#item3 {
+        grid-column: 1/2;
+    }
+    
+    #item1{
+        grid-row: 1/2;
+    }
+    
+    #item2{
+        grid-row: 2/3;
+    }
+    
+    #item3{
+        grid-row: 3/4;
+    }
+    
+    #footerLogo {
+        display: block;
+        grid-row: 1/4;
+        grid-column: 2/3;
+    }
+    
+    .footerIcons {
+        grid-column: 3/4;
+        grid-row: 2/3;
+        font-size: 3vw;
+    }
+    
+    #authorRow {
+        grid-column: 1/4;
+    }
+
+}
+
+/*desktop */
+
+@media screen and (min-width: 992px){
+    
+    .footerIcons {
+        font-size: 1.5em;
+    }
+    
+}
+
+
+

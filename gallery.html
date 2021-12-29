@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Astronomy Ireland | Gallery</title>
+	<link href="css/style_Gallery.css" rel="stylesheet">
+    <link href="css/style_General.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+    </style>
+    
+    <script>
+    
+        function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+        
+    </script>
+    </head>
+    
+<body>
+<header> 
+           
+    
+    <!--       Main Nav List-->
+    <nav class="topnav" id="myTopnav">
+        <ul>
+            <li class="listLogo"><a href="index.html" class="logo"><img src="images/wixLogoCrop.jpg" alt="Astronomy Ireland logo" id="logoImg"></a><!--logo made with wix logo maker -->
+            </li>
+            <li class="narrow"><a href="fun.html">Fun</a></li>
+            <li class="wide active"><a href="gallery.html">Gallery</a></li>
+            <li class="narrow"><a href="w3c.html">W3C</a></li>
+            <li class="narrow"><a href="style.html">Style</a></li>
+            <li class="narrow"><a href="shop.html">Shop</a></li>
+            <li class="wide"><a href="contact.html">Contact</a></li>
+            <li><a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a></li>
+        </ul>
+    
+    </nav>
+</header>
+<main>
+    
+    <h1>Gallery Images</h1>
+    <div class="mainDiv">
+        <div class="largeImg">
+            <p>
+                <img src="images/pic1.jpg" alt="Purple Galaxy" id="slideShow"/>
+                <!--       img sourced from pexels. Free to use. -->
+            </p>
+        </div>    
+
+        <div class="thumbnails">
+            <p>
+                 <a href="#" id="1"><img src="images/thumbnails/pic1-sm.jpg" alt="Purple Galaxy thumbnail"></a> 
+                <!--       img sourced from pexels. Free to use. -->
+                 <a href="#" id="2"><img src="images/thumbnails/pic2-sm.jpg" alt="Turquoise Northern Lights thumbnail"></a>
+                <!--       img sourced from pexels. Free to use. -->
+                 <a href="#" id="3"><img src="images/thumbnails/pic3-sm.jpg" alt="Night Sky from Earth thumbnail"></a>
+                <!--       img sourced from pexels. Free to use. -->
+                 <a href="#" id="4"><img src="images/thumbnails/pic4-sm.jpg" alt="Shooting star thumbnail"></a> </p>
+            <!--       img sourced from pexels. Free to use. -->
+
+               <p> Move the cursor over the images/picture you wish to preview</p>
+
+            <p>
+                 <a href="#" id="5"><img src="images/thumbnails/pic5-sm.jpg" alt="Green and Purple northern lights thumbnail"></a> 
+                <!--       img sourced from pexels. Free to use. -->
+                 <a href="#" id="6"><img src="images/thumbnails/pic6-sm.jpg" alt="Icy climate northern lights thumbnail"></a>
+                <!--       img sourced from pexels. Free to use. -->
+                 <a href="#" id="7"><img src="images/thumbnails/pic7-sm.jpg" alt="blue night sky thumbnail"></a>
+                <!--       img sourced from pexels. Free to use. -->
+                 <a href="#" id="8"><img src="images/thumbnails/pic8-sm.jpg" alt="dark black and pink galaxy thumbnail"></a></p>
+            <!--       img sourced from pexels. Free to use. -->
+        </div>
+        <div class="prevNext">
+            <p>
+                  <a href="javascript: void(0);" id="prevLink">Previous |</a>
+                  <a href="javascript: void(0);" id="nextLink">Next</a>
+            </p>
+        </div>
+    </div>
+    
+    
+</main>
+<footer>
+   
+    <div class="grid-footer">
+        <a href="#" id="item1">About Us</a>
+        <a href="#" id="item2">Terms and Conditions</a>
+        <a href="#" id="item3">Privacy Policy</a>
+        <a href="index.html" id="footerLogo"><img src="images/wixLogoCrop.jpg" alt="Astronomy Ireland logo"></a>
+        <!--logo made with wix logo maker -->
+        <div class="footerIcons">
+        <a href="#" id="item7"><i class="fab fa-twitter"></i></a>
+        <a href="#" id="item8"><i class="fab fa-facebook"></i></a>
+        <a href="#" id="item9"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p id="authorRow">Author: Eoin Conway</p>
+    </div>
+</footer>
+<script>
+
+        var currentImg=1;
+
+        document.getElementById("1").addEventListener("mouseover",loadImage);
+        document.getElementById("2").addEventListener("mouseover",loadImage);
+        document.getElementById("3").addEventListener("mouseover",loadImage);
+        document.getElementById("4").addEventListener("mouseover",loadImage);
+        document.getElementById("5").addEventListener("mouseover",loadImage);
+         document.getElementById("6").addEventListener("mouseover",loadImage);
+         document.getElementById("7").addEventListener("mouseover",loadImage);
+         document.getElementById("8").addEventListener("mouseover",loadImage);
+
+        document.getElementById("prevLink").addEventListener("click",prevLink);
+        document.getElementById("nextLink").addEventListener("click",nextLink);
+
+        function loadImage()
+
+        {   imgNum=this.id;
+             document.getElementById("slideShow").src= "images/pic"+imgNum+ ".jpg";
+             currentImg=imgNum;
+        }
+
+
+        function nextLink()
+        {
+         if(currentImg==8)
+                    {
+                        document.getElementById("slideShow").src=
+                            "images/pic1.jpg";
+                        currentImg=1;
+                        return false;
+                    }
+                else
+                    {
+                        currentImg++;
+                        document.getElementById("slideShow").src=
+                            "images/pic"+currentImg+".jpg";
+                        return false;
+                    }
+
+        }
+
+        function prevLink(){
+                if(currentImg==1)
+                    {
+                        document.getElementById("slideShow").src=
+                            "images/pic8.jpg";
+                        currentImg=8;
+                        return false;
+                    }
+                else
+                {
+                    currentImg--;
+                    document.getElementById("slideShow").src=
+                        "images/pic"+currentImg+".jpg";
+                    return false;
+                }
+            }
+
+
+
+</script>
+</body>
+</html>

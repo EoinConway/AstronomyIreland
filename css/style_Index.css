@@ -1,0 +1,231 @@
+.heroimage { /* this is an example of a class selector*/
+    background-image: url(../images/pexels-heroImage.jpg); /*Photo by Felix Mittermeier from Pexels. Free to Use.*/
+    height: 30vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    opacity: .75;
+}
+
+.herotext h1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: white;
+    font-family: 'Fascinate', cursive;
+    text-shadow: 0 0 1em white;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    z-index: -1;
+}
+
+.shopBanner {
+    font-size: 3vw;
+    width: 100%;
+    text-align: center;
+    background-color: red;
+    text-transform: uppercase;
+    position: absolute;
+    top:0;
+    right:0;
+    z-index: 0;
+}
+
+#welcomeMessage {
+    border: 1em dotted #00060D;
+    border-radius: 10em;
+    margin-bottom: 3em;
+}
+
+#welcomeMessage p {
+    padding: 0 2em 1em 2em;
+    text-align: center;
+}
+
+article {
+    background-color: #00060D;
+    padding: 1em;
+    justify-self: center;
+    position: relative;
+}
+
+article a {
+    color: white;
+    text-decoration: none;
+    position:absolute;
+    bottom: 0.5em;
+    right: 0.5em;
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+article a:hover {
+    text-decoration: underline;
+}
+
+h3 {
+    font-family: 'Fascinate';
+    color: white;
+}
+
+
+.grid-container {
+        display: grid;
+        margin-left: auto;
+        margin-right: auto;
+        grid-template-columns: 100%;
+        grid-gap: 0.5em;
+    }
+
+h2 {
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+    font-size: 5vw;
+}
+
+
+/*mobile*/
+@media screen and (max-width: 600px) {
+    
+    .heroimage {
+        display:none;
+    }
+    
+    img {
+        height: auto;
+        width: 100%;
+    }
+    
+    #welcomeMessage {
+        padding: 1em;
+    }
+    
+    h2 {
+        font-size: 3em; 
+    }
+}
+
+
+
+
+/*tablet*/
+@media screen and (min-width: 601px) {
+    
+    .herotext {
+        font-size: 5em;
+    }
+    
+    .heroimage {
+        display: none;
+    }
+    
+    .grid-container {
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+    }
+    
+    .article1 {
+        grid-column: 1/2;
+    }
+    
+    .article2{
+        grid-column: 2/3;
+    }
+    
+    .article3{
+        grid-column: 1/3;
+    }
+    
+    .article4 {
+        grid-column: 1/3;
+    }
+    
+    #welcomeMessage {
+        grid-column: 1/span all;
+    }
+    
+    #welcomeMessage h2 {
+        padding: 0 1em;
+        font-size: 5vw;
+    }
+    
+    h3 {
+        margin: 0;
+    }
+
+}
+
+
+
+
+
+
+/*desktop*/
+@media screen and (min-width: 992px) {
+    
+    #welcomeMessage h2 {
+        padding:0;
+    }
+    
+    .grid-container {grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    
+    
+    .heroimage{
+        display:block;
+    }  
+    
+    .herotext {
+        font-size: 6vw;
+    }
+    
+    .article1 {
+        grid-column: 1/2;
+    }
+    
+    .article2 {
+        grid-column: 2/3;
+    }
+    
+    .article3 {
+        grid-column: 3/4;
+    }  
+
+    .article4 {
+        grid-column: 1/4;
+        display: flex;
+    }
+    
+    .article4 img {
+        float: left;
+        width:70%;
+    }
+    
+    .article4text {
+        float:right;
+        padding: 0 2em;
+    }
+    
+    .article4 h3 {
+        margin-top: 2.5em;
+    }
+    
+    h3 {
+        font-size: 3vw;
+    }
+    
+    #welcomeMessage h2 {
+        font-size: 3.7vw;
+        padding: 0 0.1em;
+    }
+
+}
+
+
